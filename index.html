@@ -10,356 +10,185 @@
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
 </head>
 <body class="bg-black text-white">
-    <header class="py-5 bg-dark border-bottom border-secondary shadow-lg">
-        <div class="container text-center" data-aos="fade-down">
-            <h1 class="display-4 text-primary">CS Expert Roadmap 🎓</h1>
-            <p class="lead text-secondary">A curated path to a complete Computer Science education, built exclusively on  40 Major, Completely Free Resources .</p>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top border-bottom border-secondary">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary d-flex align-items-center" href="#top">
+                <!-- Inline SVG logo -->
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2" role="img" aria-hidden="true">
+                    <rect x="1" y="3" width="22" height="18" rx="2" fill="#0d6efd" />
+                    <path d="M6 8h12M6 12h12M6 16h8" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span>CS Expert Roadmap</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="#curriculum">Curriculum</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#support">Support</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item ms-lg-3"><a class="btn btn-outline-light btn-sm" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</a></li>
+                </ul>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <main id="curriculum" class="container my-5">
-        
-        <div class="accordion accordion-flush" id="curriculumAccordion">
-            
-            <section class="accordion-item course-section bg-dark border-secondary">
-                <h2 class="accordion-header">
-                    <button class="accordion-button bg-dark text-white fw-bold fs-5 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Stage 1: Programming & Foundational Math 🚀
-                    </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#curriculumAccordion">
-                    <div class="accordion-body course-list p-4">
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="fade-up" data-aos-delay="100" data-course="cs61a">
-                            <h3 class="h5 card-title text-primary">1. CS 61A: Structure and Interpretation of Computer Programs</h3>
-                            <p class="card-text text-light">Source:  UC Berkeley (Fall 2023) </p>
-                            <p class="card-text text-light"> Description:  A foundational course teaching abstraction, programming paradigms (Python), recursion, and functional programming concepts.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="https://cs61a.org/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="cs61a">Mark Complete</button></div>
-                        </article>
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="fade-up" data-aos-delay="200" data-course="discrete_math">
-                            <h3 class="h5 card-title text-primary">2. Mathematics for Computer Science</h3>
-                            <p class="card-text text-light">Source:  MIT OpenCourseWare (6.042J) </p>
-                            <p class="card-text text-light"> Description:  Logic, proofs, induction, sets, counting, and graph theory—essential mathematical tools for CS.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="discrete_math">Mark Complete</button></div>
-                        </article>
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="fade-up" data-aos-delay="300" data-course="calc1">
-                            <h3 class="h5 card-title text-primary">3. Single Variable Calculus</h3>
-                            <p class="card-text text-light">Source:  MIT OpenCourseWare (18.01SC) </p>
-                            <p class="card-text text-light"> Description:  Core concepts of limits, derivatives, and integrals, necessary for advanced theory and physics simulations.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="calc1">Mark Complete</button></div>
-                        </article>
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="fade-up" data-aos-delay="400" data-course="lin_alg">
-                            <h3 class="h5 card-title text-primary">4. Linear Algebra</h3>
-                            <p class="card-text text-light">Source:  MIT OpenCourseWare (18.06) </p>
-                            <p class="card-text text-light"> Description:  Vectors, matrices, systems of linear equations, and eigenvectors—foundational for Machine Learning and Graphics.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="lin_alg">Mark Complete</button></div>
-                        </article>
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="fade-up" data-aos-delay="500" data-course="cs61b">
-                            <h3 class="h5 card-title text-primary">5. CS 61B: Data Structures</h3>
-                            <p class="card-text text-light">Source:  UC Berkeley (Spring 2018) </p>
-                            <p class="card-text text-light"> Description:  In-depth coverage of common data structures (lists, trees, maps) and object-oriented programming using Java.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="https://sp18.datastructur.es/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="cs61b">Mark Complete</button></div>
-                        </article>
+    <main class="container my-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 text-primary">Become a CS Expert</h1>
+                <p class="lead text-secondary">A complete, staged Computer Science program built from free university courses and practical projects. Structured for self-study with optional mentoring and professional services.</p>
+                <div class="mt-4">
+                    <a href="curriculum.html" class="btn btn-primary btn-lg me-2">View Curriculum</a>
+                    <a href="support.html" class="btn btn-outline-light btn-lg">Tutoring & Mentorship</a>
+                </div>
+            </div>
+            <div class="col-lg-6 d-none d-lg-block">
+                <div class="card bg-dark border-secondary shadow-sm p-3">
+                    <div class="card-body">
+                        <h5 class="text-primary">Program Highlights</h5>
+                        <ul class="text-light">
+                            <li>40+ university-level courses grouped into 8 progressive stages</li>
+                            <li>Interactive curriculum grid with search and course details</li>
+                            <li>Progress tracking, mentoring, and interview prep</li>
+                        </ul>
+                        <div class="mt-3">
+                            <a href="about.html" class="btn btn-outline-light btn-sm">Learn More</a>
+                        </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </div>
+    </main>
 
-            <section class="accordion-item course-section bg-dark border-secondary">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-dark text-white fw-bold fs-5 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Stage 2: Core Algorithms & Theory 🧠
-                    </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#curriculumAccordion">
-                    <div class="accordion-body course-list p-4">
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="fade-right" data-aos-delay="100" data-course="algo_mit">
-                            <h3 class="h5 card-title text-primary">6. Introduction to Algorithms</h3>
-                            <p class="card-text text-light">Source:  MIT OpenCourseWare (6.006) </p>
-                            <p class="card-text text-light"> Description:  Foundation of algorithm analysis, common data structures, sorting, searching, and basic graph algorithms.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="algo_mit">Mark Complete</button></div>
-                        </article>
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="fade-right" data-aos-delay="200" data-course="algo_advanced">
-                            <h3 class="h5 card-title text-primary">7. Advanced Algorithms</h3>
-                            <p class="card-text text-light">Source:  UC Berkeley (CS 170 - Spring 2023) </p>
-                            <p class="card-text text-light"> Description:  Advanced complexity, randomized algorithms, dynamic programming, network flow, and NP-completeness.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="https://cs170.org/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="algo_advanced">Mark Complete</button></div>
-                        </article>
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="fade-right" data-aos-delay="300" data-course="theory_comp">
-                            <h3 class="h5 card-title text-primary">8. Theory of Computation</h3>
-                            <p class="card-text text-light">Source:  MIT OpenCourseWare (6.045J) </p>
-                            <p class="card-text text-light"> Description:  Formal languages, finite automata, Turing machines, decidability, and complexity classes (P vs NP).</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="https://ocw.mit.edu/courses/6-045j-automata-computability-and-complexity-spring-2011/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="theory_comp">Mark Complete</button></div>
-                        </article>
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="fade-right" data-aos-delay="400" data-course="prob_stats">
-                            <h3 class="h5 card-title text-primary">9. Probability and Statistics</h3>
-                            <p class="card-text text-light">Source:  MIT OpenCourseWare (6.041/6.431) </p>
-                            <p class="card-text text-light"> Description:  Essential probability theory, random variables, statistical inference, and their application in algorithms.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="prob_stats">Mark Complete</button></div>
-                        </article>
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="fade-right" data-aos-delay="500" data-course="numerical_analysis">
-                            <h3 class="h5 card-title text-primary">10. Numerical Analysis</h3>
-                            <p class="card-text text-light">Source:  Stanford University (CS205A) </p>
-                            <p class="card-text text-light"> Description:  Techniques for solving continuous math problems on a discrete machine (e.g., floating-point arithmetic, root finding).</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="https://stanford.edu/class/cs205a/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="numerical_analysis">Mark Complete</button></div>
-                        </article>
+        <!-- Right-side Table of Contents (visible on extra-large screens) -->
+        <nav id="side-toc" class="position-fixed end-0 top-50 translate-middle-y d-none d-xl-block me-3" aria-label="Stage navigation">
+            <div class="card bg-dark border-secondary" style="width:220px;">
+                <div class="card-body py-2">
+                    <h6 class="text-primary mb-2">Stages</h6>
+                    <ul class="nav flex-column small">
+                        <li class="nav-item"><a class="nav-link text-light" href="#collapseOne">Stage 1</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="#collapseTwo">Stage 2</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="#collapseThree">Stage 3</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="#collapseFour">Stage 4</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="#collapseFive">Stage 5</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="#collapseSix">Stage 6</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="#collapseSeven">Stage 7</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="#collapseEight">Stage 8</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Support & Tutoring Section -->
+        <section id="support" class="container my-4" data-aos="fade-up">
+            <div class="card bg-dark border-secondary shadow-sm">
+                <div class="card-body">
+                    <h2 class="h4 text-primary">Need help completing a course?</h2>
+                    <p class="text-light mb-3">If you'd like guided support through any of these courses, we offer professional tutoring and coaching packages tailored to your goals — from focused 1:1 sessions to structured multi-week mentorship plans.</p>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list-unstyled text-light">
+                                <li class="mb-2"><strong>One-on-One Tutoring</strong> — Personalized sessions to target gaps, code reviews, and hands-on problem solving.</li>
+                                <li class="mb-2"><strong>Structured Mentorship</strong> — Multi-week plans with milestones, project reviews, and career guidance.</li>
+                                <li class="mb-2"><strong>Group Workshops</strong> — Cohort-based workshops for topic deep-dives and peer learning.</li>
+                                <li class="mb-2"><strong>Interview Prep</strong> — Algorithm walkthroughs, mock interviews, and feedback reports.</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="text-light mb-2"><strong>How it works</strong></p>
+                            <ol class="text-light">
+                                <li>Book a free 15-minute consultation to discuss objectives and fit.</li>
+                                <li>Choose a plan: ad-hoc sessions, monthly mentoring, or an intensive bootcamp.</li>
+                                <li>Schedule sessions at convenient times; receive materials and progress tracking.</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-2 mt-3">
+                        <a href="#" class="btn btn-primary">Book a Consultation</a>
+                        <a href="#" class="btn btn-outline-light" id="view-pricing">View Plans & Pricing</a>
+                    </div>
+
+                    <p class="small text-muted mt-3 mb-0">We maintain a transparent pricing and refund policy. Payment terms and scheduling details will be shared during the consultation. For corporate or bulk training inquiries, please contact us for a tailored proposal.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Modal -->
+        <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-dark text-white border-secondary">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-primary" id="contactModalLabel">Contact & Scheduling</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <label for="contactName" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="contactName" placeholder="Your name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contactEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="contactEmail" placeholder="you@example.com" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contactMessage" class="form-label">Message / Topics</label>
+                                <textarea id="contactMessage" class="form-control" rows="4" placeholder="Which course or topic do you want help with?" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Preferred:</label>
+                                <select id="contactPreference" class="form-select">
+                                    <option>One-on-one tutoring</option>
+                                    <option>Structured mentorship</option>
+                                    <option>Group workshop</option>
+                                    <option>Interview prep</option>
+                                </select>
+                            </div>
+                            <div class="d-flex gap-2 justify-content-end">
+                                <a id="calendlyLink" class="btn btn-outline-light" href="https://calendly.com/" target="_blank" rel="noopener">Schedule on Calendly</a>
+                                <button type="submit" class="btn btn-primary">Send Email</button>
+                            </div>
+                        </form>
+                        <div id="contactAlert" class="alert alert-success mt-3 d-none" role="alert">Your message has been prepared in your email client. Please review and send.</div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </div>
 
-            <section class="accordion-item course-section bg-dark border-secondary">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-dark text-white fw-bold fs-5 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Stage 3: Computer Systems & Architecture 🖥️
-                    </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#curriculumAccordion">
-                    <div class="accordion-body course-list p-4">
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="fade-left" data-aos-delay="100" data-course="nand2tetris">
-                            <h3 class="h5 card-title text-primary">11. From Nand to Tetris (Part I & II)</h3>
-                            <p class="card-text text-light">Source:  The Elements of Computing Systems </p>
-                            <p class="card-text text-light"> Description:  Hands-on project building a complete computer system from logic gates up to an OS and compiler.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="https://www.nand2tetris.org/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="nand2tetris">Mark Complete</button></div>
-                        </article>
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="fade-left" data-aos-delay="200" data-course="os_ucb">
-                            <h3 class="h5 card-title text-primary">12. Operating Systems and System Programming</h3>
-                            <p class="card-text text-light">Source:  UC Berkeley (CS 162 - Spring 2023) </p>
-                            <p class="card-text text-light"> Description:  Core OS concepts: processes, threads, synchronization, concurrency, virtual memory, and I/O systems.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="https://cs162.org/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="os_ucb">Mark Complete</button></div>
-                        </article>
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="fade-left" data-aos-delay="300" data-course="arch_mit">
-                            <h3 class="h5 card-title text-primary">13. Computer System Architecture</h3>
-                            <p class="card-text text-light">Source:  MIT OpenCourseWare (6.823) </p>
-                            <p class="card-text text-light"> Description:  Advanced CPU design, pipelining, memory hierarchy (caches), and exploiting parallelism.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="https://ocw.mit.edu/courses/6-823-computer-system-architecture-fall-2005/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="arch_mit">Mark Complete</button></div>
-                        </article>
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="fade-left" data-aos-delay="400" data-course="compilers_ucb">
-                            <h3 class="h5 card-title text-primary">14. Compilers</h3>
-                            <p class="card-text text-light">Source:  UC Berkeley (CS 164 - Fall 2023) </p>
-                            <p class="card-text text-light"> Description:  Theory and implementation of compilers, including lexical analysis, parsing, optimization, and code generation.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="https://cs164.org/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="compilers_ucb">Mark Complete</button></div>
-                        </article>
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="fade-left" data-aos-delay="500" data-course="parallel_sys">
-                            <h3 class="h5 card-title text-primary">15. Performance Engineering of Software Systems</h3>
-                            <p class="card-text text-light">Source:  MIT OpenCourseWare (6.172) </p>
-                            <p class="card-text text-light"> Description:  Techniques for optimizing software performance, including cache awareness, vectorization, and parallel computing.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="https://ocw.mit.edu/courses/6-172-performance-engineering-of-software-systems-fall-2018/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="parallel_sys">Mark Complete</button></div>
-                        </article>
+        <!-- Course Details Modal -->
+        <div class="modal fade" id="courseDetailsModal" tabindex="-1" aria-labelledby="courseDetailsLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content bg-dark text-white border-secondary">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-primary" id="courseDetailsLabel">Course Details</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h4 id="detail-title" class="h6 text-light"></h4>
+                        <p id="detail-source" class="small text-secondary mb-2"></p>
+                        <p id="detail-desc" class="text-light"></p>
+                        <div class="mt-3 d-flex justify-content-end gap-2">
+                            <a id="detail-link" href="#" target="_blank" class="btn btn-outline-light btn-sm">Open Course</a>
+                            <button type="button" class="btn btn-primary btn-sm" data-bs-dismiss="modal">Close</button>
+                        </div>
                     </div>
                 </div>
-            </section>
-
-            <section class="accordion-item course-section bg-dark border-secondary">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-dark text-white fw-bold fs-5 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        Stage 4: Networking & Security 🔒
-                    </button>
-                </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#curriculumAccordion">
-                    <div class="accordion-body course-list p-4">
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="zoom-in" data-aos-delay="100" data-course="net_stanford">
-                            <h3 class="h5 card-title text-primary">16. Computer Networking</h3>
-                            <p class="card-text text-light">Source:  Stanford University (CS144 - Fall 2021) </p>
-                            <p class="card-text text-light"> Description:  In-depth look at the TCP/IP stack, network layers, routing, congestion control, and application protocols.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="http://cs144.stanford.edu/class/cs144-fa21/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="net_stanford">Mark Complete</button></div>
-                        </article>
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="zoom-in" data-aos-delay="200" data-course="crypto">
-                            <h3 class="h5 card-title text-primary">17. Practical Cryptography</h3>
-                            <p class="card-text text-light">Source:  Stanford University (CS 255 - Course Site/Videos) </p>
-                            <p class="card-text text-light"> Description:  Symmetric and public-key encryption, hash functions, digital signatures, and building secure systems.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="https://web.stanford.edu/class/cs255/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="crypto">Mark Complete</button></div>
-                        </article>
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="zoom-in" data-aos-delay="300" data-course="applied_security">
-                            <h3 class="h5 card-title text-primary">18. Computer Security</h3>
-                            <p class="card-text text-light">Source:  MIT OpenCourseWare (6.858) </p>
-                            <p class="card-text text-light"> Description:  Principles of secure system design, web security, network security, and practical threat modeling.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="https://ocw.mit.edu/courses/6-858-computer-systems-security-fall-2014/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="applied_security">Mark Complete</button></div>
-                        </article>
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="zoom-in" data-aos-delay="400" data-course="distributed_net">
-                            <h3 class="h5 card-title text-primary">19. Distributed Systems Engineering</h3>
-                            <p class="card-text text-light">Source:  MIT OpenCourseWare (6.824) </p>
-                            <p class="card-text text-light"> Description:  Building reliable, scalable, and fault-tolerant distributed services (e.g., MapReduce, Raft, Paxos).</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="https://pdos.csail.mit.edu/6.824/schedule.html" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="distributed_net">Mark Complete</button></div>
-                        </article>
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="zoom-in" data-aos-delay="500" data-course="compiler_optimization">
-                            <h3 class="h5 card-title text-primary">20. Advanced Compilers and Optimization</h3>
-                            <p class="card-text text-light">Source:  Stanford University (CS243) </p>
-                            <p class="card-text text-light"> Description:  Deep dive into modern compiler backends, static analysis, and code optimization techniques.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="https://web.stanford.edu/class/cs243/index.html" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="compiler_optimization">Mark Complete</button></div>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <section class="accordion-item course-section bg-dark border-secondary">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-dark text-white fw-bold fs-5 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                        Stage 5: Data Management & Software Engineering 🗃️
-                    </button>
-                </h2>
-                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#curriculumAccordion">
-                    <div class="accordion-body course-list p-4">
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="fade-up" data-aos-delay="100" data-course="dbs_stanford_intro">
-                            <h3 class="h5 card-title text-primary">21. Introduction to Database Systems</h3>
-                            <p class="card-text text-light">Source:  Stanford University (CS145) </p>
-                            <p class="card-text text-light"> Description:  Relational model, SQL, query processing, transaction management, and crash recovery.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="http://cs145.stanford.edu/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="dbs_stanford_intro">Mark Complete</button></div>
-                        </article>
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="fade-up" data-aos-delay="200" data-course="advanced_dbs">
-                            <h3 class="h5 card-title text-primary">22. Advanced Topics in Database Systems</h3>
-                            <p class="card-text text-light">Source:  MIT OpenCourseWare (6.830) </p>
-                            <p class="card-text text-light"> Description:  Distributed databases, big data systems (e.g., Hadoop/Spark), and NoSQL architectures.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="https://ocw.mit.edu/courses/6-830-database-systems-fall-2010/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="advanced_dbs">Mark Complete</button></div>
-                        </article>
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="fade-up" data-aos-delay="300" data-course="software_design">
-                            <h3 class="h5 card-title text-primary">23. Software Engineering Design</h3>
-                            <p class="card-text text-light">Source:  MIT OpenCourseWare (6.170) </p>
-                            <p class="card-text text-light"> Description:  Principles of modularity, abstraction, design patterns, testing, and system evolution.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="https://ocw.mit.edu/courses/6-170-software-studio-spring-2003/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="software_design">Mark Complete</button></div>
-                        </article>
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="fade-up" data-aos-delay="400" data-course="web_fullstack">
-                            <h3 class="h5 card-title text-primary">24. Web Development (Full-Stack Roadmap)</h3>
-                            <p class="card-text text-light">Source:  The Odin Project (Free Curriculum) </p>
-                            <p class="card-text text-light"> Description:  A comprehensive, project-based curriculum covering HTML, CSS, JavaScript, and either Ruby or Node.js backends.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="https://www.theodinproject.com/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="web_fullstack">Mark Complete</button></div>
-                        </article>
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="fade-up" data-aos-delay="500" data-course="human_comp_interaction">
-                            <h3 class="h5 card-title text-primary">25. User Interface Design and Implementation</h3>
-                            <p class="card-text text-light">Source:  UC Berkeley (CS 160 - Fall 2023) </p>
-                            <p class="card-text text-light"> Description:  Principles of Human-Computer Interaction (HCI), user-centered design, and prototyping techniques.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="https://cs160.org/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="human_comp_interaction">Mark Complete</button></div>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <section class="accordion-item course-section bg-dark border-secondary">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-dark text-white fw-bold fs-5 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                        Stage 6: Artificial Intelligence & Machine Learning 🤖
-                    </button>
-                </h2>
-                <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#curriculumAccordion">
-                    <div class="accordion-body course-list p-4">
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="fade-left" data-aos-delay="100" data-course="ai_berkeley">
-                            <h3 class="h5 card-title text-primary">26. Introduction to Artificial Intelligence (AI)</h3>
-                            <p class="card-text text-light">Source:  UC Berkeley (CS 188 - Fall 2023) </p>
-                            <p class="card-text text-light"> Description:  Core AI concepts: search, game theory, hidden Markov models, Bayes nets, and logic.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="http://inst.eecs.berkeley.edu/~cs188/fa23/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="ai_berkeley">Mark Complete</button></div>
-                        </article>
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="fade-left" data-aos-delay="200" data-course="ml_stanford">
-                            <h3 class="h5 card-title text-primary">27. Machine Learning</h3>
-                            <p class="card-text text-light">Source:  Stanford University (CS229 - Fall 2018) </p>
-                            <p class="card-text text-light"> Description:  Foundational course on supervised/unsupervised learning, deep learning basics, and mathematical theory.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3W530HW-LzPZc2c_K" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="ml_stanford">Mark Complete</button></div>
-                        </article>
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="fade-left" data-aos-delay="300" data-course="deep_learning">
-                            <h3 class="h5 card-title text-primary">28. Deep Learning</h3>
-                            <p class="card-text text-light">Source:  Stanford University (CS230) </p>
-                            <p class="card-text text-light"> Description:  Neural networks, CNNs, RNNs, optimization methods, and practical deployment of deep learning models.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="https://cs230.stanford.edu/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="deep_learning">Mark Complete</button></div>
-                        </article>
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="fade-left" data-aos-delay="400" data-course="reinforcement_learning">
-                            <h3 class="h5 card-title text-primary">29. Reinforcement Learning (RL)</h3>
-                            <p class="card-text text-light">Source:  UC Berkeley (CS 285 - Fall 2023) </p>
-                            <p class="card-text text-light"> Description:  Advanced RL methods: policy gradients, Q-learning, and practical applications in robotics and control.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="https://cs285.org/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="reinforcement_learning">Mark Complete</button></div>
-                        </article>
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="fade-left" data-aos-delay="500" data-course="natural_language_processing">
-                            <h3 class="h5 card-title text-primary">30. Natural Language Processing (NLP)</h3>
-                            <p class="card-text text-light">Source:  Stanford University (CS224N) </p>
-                            <p class="card-text text-light"> Description:  Deep learning for NLP, word vectors, transformers, and large language models (LLMs).</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="http://web.stanford.edu/class/cs224n/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="natural_language_processing">Mark Complete</button></div>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <section class="accordion-item course-section bg-dark border-secondary">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-dark text-white fw-bold fs-5 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                        Stage 7: Advanced Electives 🔬
-                    </button>
-                </h2>
-                <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#curriculumAccordion">
-                    <div class="accordion-body course-list p-4">
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="fade-up" data-aos-delay="100" data-course="computer_graphics">
-                            <h3 class="h5 card-title text-primary">31. Introduction to Computer Graphics</h3>
-                            <p class="card-text text-light">Source:  UC Berkeley (CS 184 - Fall 2018) </p>
-                            <p class="card-text text-light"> Description:  Fundamentals of 2D/3D graphics, geometric transformations, rendering pipelines, and shading models.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="http://inst.eecs.berkeley.edu/~cs184/fa18/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="computer_graphics">Mark Complete</button></div>
-                        </article>
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="fade-up" data-aos-delay="200" data-course="image_processing">
-                            <h3 class="h5 card-title text-primary">32. Digital Image Processing</h3>
-                            <p class="card-text text-light">Source:  MIT OpenCourseWare (6.581) </p>
-                            <p class="card-text text-light"> Description:  Filtering, Fourier transforms, image enhancement, restoration, and analysis techniques.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="https://ocw.mit.edu/courses/6-581-digital-image-processing-fall-2005/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="image_processing">Mark Complete</button></div>
-                        </article>
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="fade-up" data-aos-delay="300" data-course="embedded_systems">
-                            <h3 class="h5 card-title text-primary">33. Embedded Systems Design</h3>
-                            <p class="card-text text-light">Source:  MIT OpenCourseWare (6.115) </p>
-                            <p class="card-text text-light"> Description:  Interfacing hardware and software, real-time operating systems, and microcontroller programming (e.g., using FPGAs).</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="https://ocw.mit.edu/courses/6-115-microcontroller-project-laboratory-spring-2005/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="embedded_systems">Mark Complete</button></div>
-                        </article>
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="fade-up" data-aos-delay="400" data-course="quantum_computing">
-                            <h3 class="h5 card-title text-primary">34. Quantum Computation</h3>
-                            <p class="card-text text-light">Source:  MIT OpenCourseWare (6.811) </p>
-                            <p class="card-text text-light"> Description:  Introduction to quantum mechanics, quantum bits (qubits), Shor's algorithm, and Grover's algorithm.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="https://ocw.mit.edu/courses/6-811-quantum-computation-fall-2018/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="quantum_computing">Mark Complete</button></div>
-                        </article>
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="fade-up" data-aos-delay="500" data-course="computational_biology">
-                            <h3 class="h5 card-title text-primary">35. Algorithms for Computational Biology</h3>
-                            <p class="card-text text-light">Source:  MIT OpenCourseWare (6.878) </p>
-                            <p class="card-text text-light"> Description:  Applying algorithms to genomics, protein folding, sequence alignment, and biological data analysis.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="https://ocw.mit.edu/courses/6-878-al-gorithms-for-computational-biology-spring-2005/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="computational_biology">Mark Complete</button></div>
-                        </article>
-                    </div>
-                </div>
-            </section>
-            
-            <section class="accordion-item course-section bg-dark border-secondary">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-dark text-white fw-bold fs-5 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                        Stage 8: Capstone & Professional Development 💼
-                    </button>
-                </h2>
-                <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#curriculumAccordion">
-                    <div class="accordion-body course-list p-4">
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="zoom-in-up" data-aos-delay="100" data-course="capstone_project">
-                            <h3 class="h5 card-title text-primary">36. Capstone: Build a Large System</h3>
-                            <p class="card-text text-light">Source:  Self-Directed Project (Design Your Own) </p>
-                            <p class="card-text text-light"> Description:  Apply knowledge from Stages 1-7 to design, build, and deploy a large, complex software or hardware system.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="#" target="_blank" class="btn btn-primary btn-sm course-link">View Project Ideas</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="capstone_project">Mark Complete</button></div>
-                        </article>
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="zoom-in-up" data-aos-delay="200" data-course="adv_algorithms">
-                            <h3 class="h5 card-title text-primary">37. Advanced Data Structures and Algorithms</h3>
-                            <p class="card-text text-light">Source:  Self-Directed Study (Codeforces/LeetCode/HackerRank) </p>
-                            <p class="card-text text-light"> Description:  Continuous practice and mastery of competitive programming, data structure optimization, and interview challenges.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="https://codeforces.com/" target="_blank" class="btn btn-primary btn-sm course-link">Start Practice</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="adv_algorithms">Mark Complete</button></div>
-                        </article>
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="zoom-in-up" data-aos-delay="300" data-course="tech_writing">
-                            <h3 class="h5 card-title text-primary">38. Technical Writing and Communication</h3>
-                            <p class="card-text text-light">Source:  Google Technical Writing Courses (Free) </p>
-                            <p class="card-text text-light"> Description:  Learning to create clear documentation, design proposals, reports, and effective technical presentations.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="https://developers.google.com/tech-writing" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="tech_writing">Mark Complete</button></div>
-                        </article>
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="zoom-in-up" data-aos-delay="400" data-course="software_testing">
-                            <h3 class="h5 card-title text-primary">39. Automated Software Testing and Quality Assurance</h3>
-                            <p class="card-text text-light">Source:  Free YouTube Series/Udemy Free (Search for "Test Automation") </p>
-                            <p class="card-text text-light"> Description:  Unit testing, integration testing, TDD (Test-Driven Development), and QA methodologies for professional development.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="#" target="_blank" class="btn btn-primary btn-sm course-link">Search Resources</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="software_testing">Mark Complete</button></div>
-                        </article>
-                        <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-aos="zoom-in-up" data-aos-delay="500" data-course="tech_leadership">
-                            <h3 class="h5 card-title text-primary">40. Technology Leadership and Ethics</h3>
-                            <p class="card-text text-light">Source:  MIT OpenCourseWare (STS.060) </p>
-                            <p class="card-text text-light"> Description:  Analyzing the ethical, social, and professional responsibility issues in computing and engineering leadership.</p>
-                            <div class="d-flex justify-content-between align-items-center"><a href="https://ocw.mit.edu/courses/sts-060-ethics-and-the-law-in-engineering-and-computer-science-spring-2009/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a><button class="btn btn-outline-success btn-sm complete-btn" data-course="tech_leadership">Mark Complete</button></div>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-        </div> </main>
+            </div>
+        </div>
 
     <footer class="py-3 bg-dark mt-4 border-top border-secondary">
         <div class="container text-center">
