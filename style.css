@@ -3,46 +3,127 @@
  * Note: Most dark theme styles are handled by data-bs-theme="dark" in the HTML.
  */
 
+html, body { height: 100%; }
+
 :root {
-    /* Define a strong success color for the dark theme */
-    --bs-success-dark-mode: #198754; /* Default Bootstrap success */
-    --bs-success-complete: #4CAF50; /* A brighter green for completion */
-    --bs-secondary-subtle: #1f2327; /* Darker card background for contrast in dark mode */
+    /* accent gradient used across the site */
+    --accent-gradient: linear-gradient(135deg, #ff6b6b 0%, #ffb86b 55%, #ff9f43 100%);
+    /* stock photos (unsplash) for layered backgrounds */
+    --bg-photo-1: https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=1600&auto=format&fit=crop;
+    --bg-photo-2: https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1600&auto=format&fit=crop;
 }
 
-/* Updated styles inspired by The Odin Project */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #1a1a1a;
-    color: #e0e0e0;
+    /* layered background: photos under warm gradients so it doesn't read as a rectangle */
+    background-image:
+        linear-gradient(180deg, rgba(20,12,10,0.25), rgba(30,22,20,0.35)),
+    url("images/bg-2.jpg"),
+        radial-gradient(1200px 560px at 8% 12%, rgba(255,122,89,0.20), transparent 22%),
+        radial-gradient(1100px 560px at 92% 88%, rgba(255,184,107,0.14), transparent 22%),
+    url("images/bg-1.jpg"),
+        linear-gradient(180deg, #16110f 0%, #241b18 60%);
+    background-size: cover, cover, auto, auto, cover, cover;
+    background-position: center center, center center, 8% 12%, 92% 88%, center center, center center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay, normal, normal, normal, multiply, normal;
+    color: #e6eef0;
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-attachment: fixed;
+}
+
+/* Page-specific full-bleed backgrounds using local images */
+.page-curriculum {
+    /* hero-3.jpg as the main background for curriculum page, blended with warm gradient */
+    background-image: linear-gradient(180deg, rgba(18,14,12,0.28), rgba(28,20,18,0.36)), url("images/hero-3.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+}
+
+/* make header transparent on the curriculum page so background image is visible */
+.page-curriculum header {
+    background: transparent !important;
+    border-bottom-color: rgba(255,255,255,0.04) !important;
+    box-shadow: none !important;
+}
+
+/* ensure main content containers keep good contrast over the background */
+.page-curriculum .container, .page-curriculum .card {
+    background-color: rgba(12,10,9,0.48) !important;
+    backdrop-filter: blur(3px) saturate(1.02);
+}
+
+.page-support {
+    /* bg-2.jpg as the main background for support page, blended with warm gradient */
+    background-image: linear-gradient(180deg, rgba(18,14,12,0.28), rgba(28,20,18,0.36)), url("images/bg-2.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+}
+
+/* subtle texture overlay using a small SVG data-uri */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='f'><feTurbulence baseFrequency='0.9' numOctaves='1' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23f)' opacity='0.02' fill='black'/></svg>");
+    opacity: 0.12; /* further reduce grit so photos show through */
+    mix-blend-mode: overlay;
+}
+
+/* override any 'bg-black' utility so the body gradient shows through */
+.bg-black { background: transparent !important; }
+
+/* warm accent for testimonial borders */
+.testimonial { border-left-color: rgba(255,122,89,0.18); background: linear-gradient(90deg, rgba(255,122,89,0.04), rgba(255,184,107,0.03)); }
+
+/* make large dark containers translucent so warm background shows through more */
+.bg-dark { background-color: rgba(25,20,18,0.45) !important; backdrop-filter: saturate(1.02) blur(2px); }
+
+/* Make common high-level containers translucent so the warm page background is visible */
+.card, .card-body, .container, .navbar, .hero, header, footer, .accordion-item, .accordion-body {
+    background-color: rgba(25,20,18,0.45) !important;
+    /* blend with photographic background for softer rectangular edges */
+    background-blend-mode: overlay;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.45);
+}
+
+/* ensure body text remains readable against lighter background */
+.card .text-light, .accordion-body .text-light, .container .text-light {
+    color: #d7d7d7 !important;
 }
 
 /* 1. Ensure course items have a subtle smooth transition */
 .course-item {
-    transition: background-color 0.4s ease, opacity 0.4s ease, transform 0.3s ease; /* Added transform for hover effects */
-    border: 1px solid var(--bs-secondary-border); /* Consistent border color */
+    transition: transform 0.42s cubic-bezier(.2,.9,.3,1), box-shadow 0.42s cubic-bezier(.2,.9,.3,1), opacity 0.36s ease;
+    border: 1px solid rgba(255,255,255,0.04);
+    will-change: transform, opacity;
 }
 
 /* Optional: Slight hover effect for interactivity */
 .course-item:hover:not(.completed) {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5) !important;
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 14px 40px rgba(0,0,0,0.55) !important;
 }
 
 /* 2. Styling for Completed Course State */
 .course-item.completed {
-    background-color: #0d3b1f !important; /* Very dark green background */
-    border-color: var(--bs-success-complete) !important;
-    opacity: 0.8;
+    background: linear-gradient(90deg, rgba(11,27,20,0.92), rgba(6,18,12,0.96)) !important;
+    border-image: var(--accent-gradient) 1;
+    box-shadow: 0 12px 36px rgba(34,197,94,0.06) !important;
+    opacity: 0.98;
 }
 
 /* Adjust text color within the completed card for readability */
 .course-item.completed .text-light,
 .course-item.completed .text-primary {
-    color: #a3e6b3 !important; /* Lighter text for contrast on dark green */
+    color: #bff7d6 !important; /* Lighter text for contrast */
 }
 
 /* 3. Style the Completed button */
@@ -55,7 +136,11 @@ body {
 /* 4. Tweak the Accordion button appearance */
 .accordion-button.bg-dark {
     box-shadow: none !important;
+    transition: background-color 0.36s ease, transform 0.28s ease;
 }
+
+/* smoother collapse animation for bootstrap collapsing state */
+.accordion-collapse.collapsing { transition: height 0.48s cubic-bezier(.2,.9,.3,1); }
 
 /* Ensure the text within the course cards is highly visible */
 .card-text {
@@ -101,24 +186,88 @@ body {
 }
 
 .course-item.card {
-    background: linear-gradient(180deg, rgba(20,24,28,0.9), rgba(12,16,18,0.85));
-    border: 1px solid rgba(255,255,255,0.04);
+    background: linear-gradient(180deg, rgba(18,20,22,0.88), rgba(11,12,13,0.9));
     border-radius: 12px;
     padding: 0;
     overflow: hidden;
-    transition: transform .22s ease, box-shadow .22s ease;
+    position: relative;
 }
 
 .course-item.card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    box-shadow: 0 18px 46px rgba(0,0,0,0.62);
 }
 
-.course-item .card-body { padding: 1rem; }
+.course-item .card-body { padding: 1rem; transition: transform 0.5s cubic-bezier(.2,.9,.3,1); }
+
+/* subtle photographic texture on each course card to blend with page background */
+.course-item.card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("images/card-1.jpg");
+    background-size: cover;
+    background-position: center center;
+    opacity: 0.06;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    border-radius: 12px;
+}
 
 .course-item .course-title { color: #9ad0ff; margin-bottom: 6px; }
 .course-item .small.text-secondary { color: #9aa6b0 !important; }
 .course-item .card-text { color: #d7e7ea !important; }
+
+.course-item .course-meta { color: #9fb6c4; font-size: 0.85rem; }
+
+.hero { background: linear-gradient(180deg, rgba(13,17,23,0.6), rgba(6,8,10,0.9)); }
+/* hero decorative image: clipped, soft, and blended */
+.hero {
+    position: relative;
+    overflow: visible;
+    z-index: 0; /* base stacking context for hero */
+}
+.hero::after {
+    content: '';
+    position: absolute;
+    right: -4%;
+    top: 6%;
+    width: 48%;
+    height: 88%;
+    background-image: linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.28)), url("images/hero-2.webp");
+    background-size: cover;
+    background-position: center right;
+    filter: saturate(1.05) contrast(0.95) brightness(0.95);
+    border-radius: 32px;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.6);
+    mix-blend-mode: multiply;
+    clip-path: polygon(18% 0, 100% 0, 100% 100%, 12% 100%);
+    pointer-events: none;
+    z-index: 1; /* sit behind hero content but above page background */
+}
+
+@media (max-width: 992px) {
+    .hero::after { display: none; }
+}
+
+/* ensure hero content (images/cards) sits above the decorative pseudo-element */
+.hero .container,
+.hero img,
+.hero .card,
+.hero .row,
+.hero .col-lg-6 {
+    position: relative;
+    z-index: 2;
+}
+.stat { font-size: 1.4rem; font-weight:700; color: var(--accent-2); }
+.testimonial { background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(124,58,237,0.02)); border-left: 4px solid rgba(124,58,237,0.18); }
+.testimonial p { color: #dbeafe; }
+
+/* Small screens: slightly tighter hero */
+@media (max-width: 768px) {
+    .hero { padding-top: 90px; padding-bottom: 40px; }
+    .display-4 { font-size: 2rem; }
+}
 
 .course-item .btn-outline-light { border-radius: 6px; }
 
@@ -140,12 +289,13 @@ p, a {
 a:hover {
     color: #ffffff;
     text-decoration: underline;
+    transition: color 0.18s ease;
 }
 
 .navbar {
-    background-color: #121212;
-    border-bottom: 1px solid #333;
-    padding: 1rem 2rem;
+    background: rgba(6,6,8,0.85);
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    padding: 0.75rem 1.5rem;
 }
 
 .navbar-brand {
@@ -164,16 +314,52 @@ a:hover {
 }
 
 .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-    color: #ffffff;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
+    background: var(--accent-gradient);
+    border: 1px solid rgba(255,255,255,0.04);
+    color: #f7fafc;
+    padding: 0.56rem 1rem;
+    border-radius: 8px;
+    box-shadow: none; /* remove strong lift */
+    filter: saturate(0.9) contrast(0.95) brightness(0.98);
+    transition: transform 0.16s ease, box-shadow 0.16s ease, filter 0.16s ease, opacity 0.16s ease;
 }
 
-.btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #004085;
+.btn-primary:hover, .btn-primary:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.28);
+    filter: none;
+    opacity: 0.98;
+}
+
+/* base button muting: reduce visual burst across all .btn variants */
+.btn {
+    opacity: 0.95;
+    filter: grayscale(6%) saturate(0.88) contrast(0.96);
+    box-shadow: none !important;
+    transition: transform 0.14s ease, box-shadow 0.14s ease, filter 0.14s ease, opacity 0.14s ease;
+}
+
+.btn:hover, .btn:focus {
+    transform: translateY(-1px);
+    opacity: 1;
+}
+
+/* muted outline variants */
+.btn-outline-light {
+    color: #cfcfcf;
+    background: rgba(255,255,255,0.02);
+    border-color: rgba(255,255,255,0.06);
+}
+.btn-outline-success {
+    color: #bfe7cf;
+    background: rgba(34,197,94,0.04);
+    border-color: rgba(34,197,94,0.06);
+}
+
+/* subtle small buttons keep same radius but lower emphasis */
+.btn-sm {
+    padding: 0.35rem 0.6rem;
+    opacity: 0.96;
 }
 
 footer {

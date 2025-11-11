@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Curriculum — CS Expert Roadmap</title>
+    <title>curriculum — cs expert roadmap</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-black text-white">
+<body class="bg-black text-white page-curriculum">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top border-bottom border-secondary">
         <div class="container">
@@ -17,7 +17,7 @@
                     <rect x="1" y="3" width="22" height="18" rx="2" fill="#0d6efd"/>
                     <path d="M6 8h12M6 12h12M6 16h8" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                <span>CS Expert Roadmap</span>
+                <span>cs expert roadmap</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -25,10 +25,11 @@
 
             <div class="collapse navbar-collapse" id="mainNav">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
-                    <li class="nav-item"><a class="nav-link active" href="curriculum.html">Curriculum</a></li>
-                    <li class="nav-item"><a class="nav-link" href="support.html">Support</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item ms-lg-3"><a class="btn btn-outline-light btn-sm" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="curriculum.html">curriculum</a></li>
+                    <li class="nav-item"><a class="nav-link" href="support.html">support</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">about</a></li>
+                    <li class="nav-item"><a class="nav-link" href="diagnostic.html">diagnostic</a></li>
+                    <li class="nav-item ms-lg-3"><a class="btn btn-outline-light btn-sm" href="contact.html">contact</a></li>
                 </ul>
             </div>
         </div>
@@ -46,8 +47,8 @@
 
     <header class="py-5 bg-dark border-bottom border-secondary shadow-lg" id="top">
         <div class="container text-center" data-aos="fade-down">
-            <h1 class="display-4 text-primary">Curriculum</h1>
-            <p class="lead text-secondary">Follow the stages below to progress from beginner to expert. Mark courses as you complete them to track your progress.</p>
+            <h1 class="display-4 text-primary">curriculum</h1>
+            <p class="lead text-secondary">follow the stages below to progress from beginner to expert. mark courses as you complete them to track your progress.</p>
         </div>
     </header>
 
@@ -57,7 +58,7 @@
             <div class="col-md-8">
                 <div class="input-group">
                     <span class="input-group-text bg-dark border-secondary text-secondary">🔎</span>
-                    <input id="courseSearch" type="search" class="form-control bg-dark text-light border-secondary" placeholder="Search courses, topics, or sources (e.g., 'algorithms', 'MIT')" />
+                    <input id="courseSearch" type="search" class="form-control bg-dark text-light border-secondary" placeholder="search courses, topics, or sources (e.g., 'algorithms', 'mit')" />
                 </div>
             </div>
             <div class="col-md-4 text-md-end mt-2 mt-md-0">
@@ -65,20 +66,20 @@
             </div>
         </div>
 
-        <div class="accordion accordion-flush" id="curriculumAccordion">
+                <div class="accordion accordion-flush" id="curriculumAccordion">
             <!-- Stage 1: Programming & Foundational Math -->
             <section class="accordion-item course-section bg-dark border-secondary">
                 <h2 class="accordion-header">
                     <button class="accordion-button bg-dark text-white fw-bold fs-5 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Stage 1: Programming & Foundational Math 🚀
+                        stage 1: programming & foundational math 🚀
                     </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#curriculumAccordion">
                     <div class="accordion-body course-list p-4">
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="cs61a" data-aos="fade-up" data-aos-delay="100">
-                            <h3 class="h5 card-title text-primary">1. CS 61A: Structure and Interpretation of Computer Programs</h3>
-                            <p class="card-text text-light">Source: UC Berkeley</p>
-                            <p class="card-text text-light">Foundations of programming paradigms in Python, abstraction, recursion, and functional style.</p>
+                            <h3 class="h5 card-title text-primary">1. cs 61a: structure and interpretation of computer programs</h3>
+                            <p class="card-text text-light">source: uc berkeley</p>
+                            <p class="card-text text-light">foundations of programming paradigms in python, abstraction, recursion, and functional style.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://cs61a.org/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="cs61a">Mark Complete</button>
@@ -86,9 +87,9 @@
                         </article>
 
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="cs50" data-aos="fade-up" data-aos-delay="200">
-                            <h3 class="h5 card-title text-primary">2. CS50: Introduction to Computer Science</h3>
-                            <p class="card-text text-light">Source: Harvard</p>
-                            <p class="card-text text-light">Introductory CS course covering C, Python, algorithms, web dev, and basics of computer systems.</p>
+                            <h3 class="h5 card-title text-primary">2. cs50: introduction to computer science</h3>
+                            <p class="card-text text-light">source: harvard</p>
+                            <p class="card-text text-light">introductory cs course covering c, python, algorithms, web dev, and basics of computer systems.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://cs50.harvard.edu/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="cs50">Mark Complete</button>
@@ -96,9 +97,9 @@
                         </article>
 
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="python" data-aos="fade-up" data-aos-delay="300">
-                            <h3 class="h5 card-title text-primary">3. Python for Everybody</h3>
-                            <p class="card-text text-light">Source: University of Michigan</p>
-                            <p class="card-text text-light">Beginner-friendly Python course: basics, data structures, file I/O, and web APIs.</p>
+                            <h3 class="h5 card-title text-primary">3. python for everybody</h3>
+                            <p class="card-text text-light">source: university of michigan</p>
+                            <p class="card-text text-light">beginner-friendly python course: basics, data structures, file i/o, and web apis.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://www.py4e.com/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="python">Mark Complete</button>
@@ -106,19 +107,19 @@
                         </article>
 
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="math" data-aos="fade-up" data-aos-delay="400">
-                            <h3 class="h5 card-title text-primary">4. Mathematics for Computer Science</h3>
-                            <p class="card-text text-light">Source: MIT OCW</p>
-                            <p class="card-text text-light">Discrete math: logic, proofs, sets, relations, combinatorics, and basic number theory.</p>
+                            <h3 class="h5 card-title text-primary">4. mathematics for computer science</h3>
+                            <p class="card-text text-light">source: mit ocw</p>
+                            <p class="card-text text-light">discrete math: logic, proofs, sets, relations, combinatorics, and basic number theory.</p>
                             <div class="d-flex justify-content-between align-items-center">
-                                <a href="https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
+                                <a href="https://ocw.mit.edu/courses/6-1200j-mathematics-for-computer-science-spring-2024/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="math">Mark Complete</button>
                             </div>
                         </article>
 
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="introprog" data-aos="fade-up" data-aos-delay="500">
-                            <h3 class="h5 card-title text-primary">5. Intro to Programming Concepts</h3>
-                            <p class="card-text text-light">Source: FreeCodeCamp / Self-Guided</p>
-                            <p class="card-text text-light">Hands-on practice with basic algorithms, control flow, and simple projects.</p>
+                            <h3 class="h5 card-title text-primary">5. intro to programming concepts</h3>
+                            <p class="card-text text-light">source: freecodecamp / self-guided</p>
+                            <p class="card-text text-light">hands-on practice with basic algorithms, control flow, and simple projects.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://www.freecodecamp.org/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="introprog">Mark Complete</button>
@@ -132,15 +133,15 @@
             <section class="accordion-item course-section bg-dark border-secondary">
                 <h2 class="accordion-header">
                     <button class="accordion-button bg-dark text-white fw-bold fs-5 shadow-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Stage 2: Data Structures & Algorithms 📚
+                        stage 2: data structures & algorithms 📚
                     </button>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#curriculumAccordion">
                     <div class="accordion-body course-list p-4">
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="algoexpert" data-aos="fade-up" data-aos-delay="100">
-                            <h3 class="h5 card-title text-primary">6. AlgoExpert: Mastering Algorithms</h3>
-                            <p class="card-text text-light">Source: AlgoExpert</p>
-                            <p class="card-text text-light">Practice problems and guided solutions focused on common interview algorithms and DS.</p>
+                            <h3 class="h5 card-title text-primary">6. algoexpert: mastering algorithms</h3>
+                            <p class="card-text text-light">source: algoexpert</p>
+                            <p class="card-text text-light">practice problems and guided solutions focused on common interview algorithms and ds.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://www.algoexpert.io/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="algoexpert">Mark Complete</button>
@@ -148,9 +149,9 @@
                         </article>
 
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="leetcode" data-aos="fade-up" data-aos-delay="200">
-                            <h3 class="h5 card-title text-primary">7. LeetCode: Algorithm Practice</h3>
-                            <p class="card-text text-light">Source: LeetCode</p>
-                            <p class="card-text text-light">Hands-on coding problems across arrays, trees, graphs, dynamic programming, and more.</p>
+                            <h3 class="h5 card-title text-primary">7. leetcode: algorithm practice</h3>
+                            <p class="card-text text-light">source: leetcode</p>
+                            <p class="card-text text-light">hands-on coding problems across arrays, trees, graphs, dynamic programming, and more.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://leetcode.com/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="leetcode">Mark Complete</button>
@@ -158,9 +159,9 @@
                         </article>
 
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="algorithmsmit" data-aos="fade-up" data-aos-delay="300">
-                            <h3 class="h5 card-title text-primary">8. Algorithms (MIT)</h3>
-                            <p class="card-text text-light">Source: MIT OpenCourseWare</p>
-                            <p class="card-text text-light">Classic algorithms course covering sorting, graphs, and algorithmic techniques.</p>
+                            <h3 class="h5 card-title text-primary">8. algorithms (mit)</h3>
+                            <p class="card-text text-light">source: mit opencourseware</p>
+                            <p class="card-text text-light">classic algorithms course covering sorting, graphs, and algorithmic techniques.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-sma-5503-spring-2011/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="algorithmsmit">Mark Complete</button>
@@ -168,9 +169,9 @@
                         </article>
 
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="courseraalgo" data-aos="fade-up" data-aos-delay="400">
-                            <h3 class="h5 card-title text-primary">9. Algorithms Specialization (Coursera)</h3>
-                            <p class="card-text text-light">Source: Coursera</p>
-                            <p class="card-text text-light">Structured specialization covering algorithm design and analysis.</p>
+                            <h3 class="h5 card-title text-primary">9. algorithms specialization (coursera)</h3>
+                            <p class="card-text text-light">source: coursera</p>
+                            <p class="card-text text-light">structured specialization covering algorithm design and analysis.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://www.coursera.org/specializations/algorithms" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="courseraalgo">Mark Complete</button>
@@ -178,9 +179,9 @@
                         </article>
 
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="geeksforgeeks" data-aos="fade-up" data-aos-delay="500">
-                            <h3 class="h5 card-title text-primary">10. GeeksforGeeks DS & Algo Track</h3>
-                            <p class="card-text text-light">Source: GeeksforGeeks</p>
-                            <p class="card-text text-light">Practical tutorials and problem sets for common data structures and algorithms.</p>
+                            <h3 class="h5 card-title text-primary">10. geeksforgeeks ds & algo track</h3>
+                            <p class="card-text text-light">source: geeksforgeeks</p>
+                            <p class="card-text text-light">practical tutorials and problem sets for common data structures and algorithms.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://www.geeksforgeeks.org/data-structures/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="geeksforgeeks">Mark Complete</button>
@@ -194,15 +195,15 @@
             <section class="accordion-item course-section bg-dark border-secondary">
                 <h2 class="accordion-header">
                     <button class="accordion-button bg-dark text-white fw-bold fs-5 shadow-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Stage 3: Databases & Backend Development 🗄️
+                        stage 3: databases & backend development 🗄️
                     </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#curriculumAccordion">
                     <div class="accordion-body course-list p-4">
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="sqlzoo" data-aos="fade-up" data-aos-delay="100">
-                            <h3 class="h5 card-title text-primary">11. SQLZoo: Interactive SQL Tutorials</h3>
-                            <p class="card-text text-light">Source: SQLZoo</p>
-                            <p class="card-text text-light">Practice SQL queries interactively; great for beginners and intermediate learners.</p>
+                            <h3 class="h5 card-title text-primary">11. sqlzoo: interactive sql tutorials</h3>
+                            <p class="card-text text-light">source: sqlzoo</p>
+                            <p class="card-text text-light">practice sql queries interactively; great for beginners and intermediate learners.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://sqlzoo.net/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="sqlzoo">Mark Complete</button>
@@ -210,9 +211,9 @@
                         </article>
 
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="mongodb" data-aos="fade-up" data-aos-delay="200">
-                            <h3 class="h5 card-title text-primary">12. MongoDB Basics</h3>
-                            <p class="card-text text-light">Source: MongoDB University</p>
-                            <p class="card-text text-light">NoSQL concepts and MongoDB CRUD, indexing, aggregation, and schema design.</p>
+                            <h3 class="h5 card-title text-primary">12. mongodb basics</h3>
+                            <p class="card-text text-light">source: mongodb university</p>
+                            <p class="card-text text-light">nosql concepts and mongodb crud, indexing, aggregation, and schema design.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://university.mongodb.com/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="mongodb">Mark Complete</button>
@@ -220,9 +221,9 @@
                         </article>
 
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="postgres" data-aos="fade-up" data-aos-delay="300">
-                            <h3 class="h5 card-title text-primary">13. PostgreSQL & Relational Databases</h3>
-                            <p class="card-text text-light">Source: Various / Tutorials</p>
-                            <p class="card-text text-light">Designing schemas, joins, transactions, and performance tuning with Postgres.</p>
+                            <h3 class="h5 card-title text-primary">13. postgresql & relational databases</h3>
+                            <p class="card-text text-light">source: various / tutorials</p>
+                            <p class="card-text text-light">designing schemas, joins, transactions, and performance tuning with postgres.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://www.postgresql.org/docs/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="postgres">Mark Complete</button>
@@ -230,9 +231,9 @@
                         </article>
 
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="nodejs" data-aos="fade-up" data-aos-delay="400">
-                            <h3 class="h5 card-title text-primary">14. Node.js Backend Development</h3>
-                            <p class="card-text text-light">Source: Node.js Docs / Tutorials</p>
-                            <p class="card-text text-light">Build REST APIs, middleware patterns, and connect to databases using Node.js and Express.</p>
+                            <h3 class="h5 card-title text-primary">14. node.js backend development</h3>
+                            <p class="card-text text-light">source: node.js docs / tutorials</p>
+                            <p class="card-text text-light">build rest apis, middleware patterns, and connect to databases using node.js and express.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://nodejs.org/en/docs/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="nodejs">Mark Complete</button>
@@ -240,9 +241,9 @@
                         </article>
 
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="django" data-aos="fade-up" data-aos-delay="500">
-                            <h3 class="h5 card-title text-primary">15. Django / Flask: Python Backend</h3>
-                            <p class="card-text text-light">Source: Django / Flask Docs</p>
-                            <p class="card-text text-light">Web frameworks in Python for building full-featured backends and APIs.</p>
+                            <h3 class="h5 card-title text-primary">15. django / flask: python backend</h3>
+                            <p class="card-text text-light">source: django / flask docs</p>
+                            <p class="card-text text-light">web frameworks in python for building full-featured backends and apis.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://www.djangoproject.com/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="django">Mark Complete</button>
@@ -256,15 +257,15 @@
             <section class="accordion-item course-section bg-dark border-secondary">
                 <h2 class="accordion-header">
                     <button class="accordion-button bg-dark text-white fw-bold fs-5 shadow-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        Stage 4: Frontend Frameworks & Advanced CSS 🎨
+                        stage 4: frontend frameworks & advanced css 🎨
                     </button>
                 </h2>
                 <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#curriculumAccordion">
                     <div class="accordion-body course-list p-4">
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="reactjs" data-aos="fade-up" data-aos-delay="100">
-                            <h3 class="h5 card-title text-primary">16. React: A JavaScript Library for Building UIs</h3>
-                            <p class="card-text text-light">Source: React Docs</p>
-                            <p class="card-text text-light">Component-driven UI, hooks, routing, and state management basics.</p>
+                            <h3 class="h5 card-title text-primary">16. react: a javascript library for building uis</h3>
+                            <p class="card-text text-light">source: react docs</p>
+                            <p class="card-text text-light">component-driven ui, hooks, routing, and state management basics.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://reactjs.org/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="reactjs">Mark Complete</button>
@@ -272,9 +273,9 @@
                         </article>
 
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="cssgrid" data-aos="fade-up" data-aos-delay="200">
-                            <h3 class="h5 card-title text-primary">17. CSS Grid & Flexbox Deep Dive</h3>
-                            <p class="card-text text-light">Source: CSS-Tricks / MDN</p>
-                            <p class="card-text text-light">Master layouts, responsive design, and modern CSS techniques.</p>
+                            <h3 class="h5 card-title text-primary">17. css grid & flexbox deep dive</h3>
+                            <p class="card-text text-light">source: css-tricks / mdn</p>
+                            <p class="card-text text-light">master layouts, responsive design, and modern css techniques.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="cssgrid">Mark Complete</button>
@@ -282,9 +283,9 @@
                         </article>
 
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="vuejs" data-aos="fade-up" data-aos-delay="300">
-                            <h3 class="h5 card-title text-primary">18. Vue.js Basics</h3>
-                            <p class="card-text text-light">Source: Vue Docs</p>
-                            <p class="card-text text-light">Reactive components and composition API for building modern SPAs.</p>
+                            <h3 class="h5 card-title text-primary">18. vue.js basics</h3>
+                            <p class="card-text text-light">source: vue docs</p>
+                            <p class="card-text text-light">reactive components and composition api for building modern spas.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://vuejs.org/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="vuejs">Mark Complete</button>
@@ -292,9 +293,9 @@
                         </article>
 
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="svelte" data-aos="fade-up" data-aos-delay="400">
-                            <h3 class="h5 card-title text-primary">19. Svelte: Framework with Compile-Time Optimizations</h3>
-                            <p class="card-text text-light">Source: Svelte Docs</p>
-                            <p class="card-text text-light">Lightweight approach to building UIs with minimal runtime overhead.</p>
+                            <h3 class="h5 card-title text-primary">19. svelte: framework with compile-time optimizations</h3>
+                            <p class="card-text text-light">source: svelte docs</p>
+                            <p class="card-text text-light">lightweight approach to building uis with minimal runtime overhead.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://svelte.dev/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="svelte">Mark Complete</button>
@@ -302,9 +303,9 @@
                         </article>
 
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="typescript" data-aos="fade-up" data-aos-delay="500">
-                            <h3 class="h5 card-title text-primary">20. TypeScript: Typed JavaScript</h3>
-                            <p class="card-text text-light">Source: TypeScript Docs</p>
-                            <p class="card-text text-light">Add static typing to JavaScript for more robust front-end and back-end codebases.</p>
+                            <h3 class="h5 card-title text-primary">20. typescript: typed javascript</h3>
+                            <p class="card-text text-light">source: typescript docs</p>
+                            <p class="card-text text-light">add static typing to javascript for more robust front-end and back-end codebases.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://www.typescriptlang.org/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="typescript">Mark Complete</button>
@@ -318,15 +319,15 @@
             <section class="accordion-item course-section bg-dark border-secondary">
                 <h2 class="accordion-header">
                     <button class="accordion-button bg-dark text-white fw-bold fs-5 shadow-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                        Stage 5: DevOps & Deployment 🚀
+                        stage 5: devops & deployment 🚀
                     </button>
                 </h2>
                 <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#curriculumAccordion">
                     <div class="accordion-body course-list p-4">
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="docker" data-aos="fade-up" data-aos-delay="100">
-                            <h3 class="h5 card-title text-primary">21. Docker: Containerization Basics</h3>
-                            <p class="card-text text-light">Source: Docker Docs</p>
-                            <p class="card-text text-light">Containerize applications and build reproducible environments.</p>
+                            <h3 class="h5 card-title text-primary">21. docker: containerization basics</h3>
+                            <p class="card-text text-light">source: docker docs</p>
+                            <p class="card-text text-light">containerize applications and build reproducible environments.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://docs.docker.com/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="docker">Mark Complete</button>
@@ -334,9 +335,9 @@
                         </article>
 
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="kubernetes" data-aos="fade-up" data-aos-delay="200">
-                            <h3 class="h5 card-title text-primary">22. Kubernetes: Orchestration Basics</h3>
-                            <p class="card-text text-light">Source: Kubernetes Docs</p>
-                            <p class="card-text text-light">Deploy and manage containerized applications at scale with k8s fundamentals.</p>
+                            <h3 class="h5 card-title text-primary">22. kubernetes: orchestration basics</h3>
+                            <p class="card-text text-light">source: kubernetes docs</p>
+                            <p class="card-text text-light">deploy and manage containerized applications at scale with k8s fundamentals.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://kubernetes.io/docs/home/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="kubernetes">Mark Complete</button>
@@ -344,9 +345,9 @@
                         </article>
 
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="ci_cd" data-aos="fade-up" data-aos-delay="300">
-                            <h3 class="h5 card-title text-primary">23. CI/CD Pipelines</h3>
-                            <p class="card-text text-light">Source: GitHub Actions / GitLab CI</p>
-                            <p class="card-text text-light">Automate testing, builds, and deployments with CI/CD best practices.</p>
+                            <h3 class="h5 card-title text-primary">23. ci/cd pipelines</h3>
+                            <p class="card-text text-light">source: github actions / gitlab ci</p>
+                            <p class="card-text text-light">automate testing, builds, and deployments with ci/cd best practices.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://docs.github.com/en/actions" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="ci_cd">Mark Complete</button>
@@ -354,9 +355,9 @@
                         </article>
 
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="nginx" data-aos="fade-up" data-aos-delay="400">
-                            <h3 class="h5 card-title text-primary">24. Nginx & Reverse Proxies</h3>
-                            <p class="card-text text-light">Source: Nginx Docs</p>
-                            <p class="card-text text-light">Serving static assets, reverse proxy setups, and basic performance tuning.</p>
+                            <h3 class="h5 card-title text-primary">24. nginx & reverse proxies</h3>
+                            <p class="card-text text-light">source: nginx docs</p>
+                            <p class="card-text text-light">serving static assets, reverse proxy setups, and basic performance tuning.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://nginx.org/en/docs/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="nginx">Mark Complete</button>
@@ -364,9 +365,9 @@
                         </article>
 
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="terraform" data-aos="fade-up" data-aos-delay="500">
-                            <h3 class="h5 card-title text-primary">25. Terraform: Infrastructure as Code</h3>
-                            <p class="card-text text-light">Source: HashiCorp</p>
-                            <p class="card-text text-light">Define and provision cloud infrastructure declaratively using Terraform.</p>
+                            <h3 class="h5 card-title text-primary">25. terraform: infrastructure as code</h3>
+                            <p class="card-text text-light">source: hashicorp</p>
+                            <p class="card-text text-light">define and provision cloud infrastructure declaratively using terraform.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://www.terraform.io/docs" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="terraform">Mark Complete</button>
@@ -380,15 +381,15 @@
             <section class="accordion-item course-section bg-dark border-secondary">
                 <h2 class="accordion-header">
                     <button class="accordion-button bg-dark text-white fw-bold fs-5 shadow-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                        Stage 6: Cloud Computing ☁️
+                        stage 6: cloud computing ☁️
                     </button>
                 </h2>
                 <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#curriculumAccordion">
                     <div class="accordion-body course-list p-4">
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="aws" data-aos="fade-up" data-aos-delay="100">
-                            <h3 class="h5 card-title text-primary">26. AWS: Introduction to Cloud Computing</h3>
-                            <p class="card-text text-light">Source: AWS Training</p>
-                            <p class="card-text text-light">Core AWS services, IAM, storage, compute, and common architectural patterns.</p>
+                            <h3 class="h5 card-title text-primary">26. aws: introduction to cloud computing</h3>
+                            <p class="card-text text-light">source: aws training</p>
+                            <p class="card-text text-light">core aws services, iam, storage, compute, and common architectural patterns.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://aws.amazon.com/training/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="aws">Mark Complete</button>
@@ -396,9 +397,9 @@
                         </article>
 
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="gcp" data-aos="fade-up" data-aos-delay="200">
-                            <h3 class="h5 card-title text-primary">27. Google Cloud Platform Fundamentals</h3>
-                            <p class="card-text text-light">Source: Google Cloud Training</p>
-                            <p class="card-text text-light">Compute, storage, networking, and managed services on GCP.</p>
+                            <h3 class="h5 card-title text-primary">27. google cloud platform fundamentals</h3>
+                            <p class="card-text text-light">source: google cloud training</p>
+                            <p class="card-text text-light">compute, storage, networking, and managed services on gcp.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://cloud.google.com/training" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="gcp">Mark Complete</button>
@@ -406,9 +407,9 @@
                         </article>
 
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="azure" data-aos="fade-up" data-aos-delay="300">
-                            <h3 class="h5 card-title text-primary">28. Microsoft Azure Fundamentals</h3>
-                            <p class="card-text text-light">Source: Microsoft Learn</p>
-                            <p class="card-text text-light">Overview of Azure services and cloud concepts for architects and developers.</p>
+                            <h3 class="h5 card-title text-primary">28. microsoft azure fundamentals</h3>
+                            <p class="card-text text-light">source: microsoft learn</p>
+                            <p class="card-text text-light">overview of azure services and cloud concepts for architects and developers.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://learn.microsoft.com/azure/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="azure">Mark Complete</button>
@@ -416,9 +417,9 @@
                         </article>
 
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="serverless" data-aos="fade-up" data-aos-delay="400">
-                            <h3 class="h5 card-title text-primary">29. Serverless Architectures</h3>
-                            <p class="card-text text-light">Source: Various</p>
-                            <p class="card-text text-light">Learn Functions-as-a-Service, event-driven patterns, and cost considerations.</p>
+                            <h3 class="h5 card-title text-primary">29. serverless architectures</h3>
+                            <p class="card-text text-light">source: various</p>
+                            <p class="card-text text-light">learn functions-as-a-service, event-driven patterns, and cost considerations.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://aws.amazon.com/serverless/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="serverless">Mark Complete</button>
@@ -426,9 +427,9 @@
                         </article>
 
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="cloudsec" data-aos="fade-up" data-aos-delay="500">
-                            <h3 class="h5 card-title text-primary">30. Cloud Security Basics</h3>
-                            <p class="card-text text-light">Source: Cloud Provider Docs</p>
-                            <p class="card-text text-light">Identity, access management, network security, and best practices for cloud security.</p>
+                            <h3 class="h5 card-title text-primary">30. cloud security basics</h3>
+                            <p class="card-text text-light">source: cloud provider docs</p>
+                            <p class="card-text text-light">identity, access management, network security, and best practices for cloud security.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://cloud.google.com/security" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="cloudsec">Mark Complete</button>
@@ -442,15 +443,15 @@
             <section class="accordion-item course-section bg-dark border-secondary">
                 <h2 class="accordion-header">
                     <button class="accordion-button bg-dark text-white fw-bold fs-5 shadow-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                        Stage 7: Machine Learning & AI 🤖
+                        stage 7: machine learning & ai 🤖
                     </button>
                 </h2>
                 <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#curriculumAccordion">
                     <div class="accordion-body course-list p-4">
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="mlcourse" data-aos="fade-up" data-aos-delay="100">
-                            <h3 class="h5 card-title text-primary">31. Machine Learning by Andrew Ng</h3>
-                            <p class="card-text text-light">Source: Coursera</p>
-                            <p class="card-text text-light">Classic intro to ML: regression, classification, SVMs, neural networks, and unsupervised learning.</p>
+                            <h3 class="h5 card-title text-primary">31. machine learning by andrew ng</h3>
+                            <p class="card-text text-light">source: coursera</p>
+                            <p class="card-text text-light">classic intro to ml: regression, classification, svms, neural networks, and unsupervised learning.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://www.coursera.org/learn/machine-learning" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="mlcourse">Mark Complete</button>
@@ -458,9 +459,9 @@
                         </article>
 
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="tensorflow" data-aos="fade-up" data-aos-delay="200">
-                            <h3 class="h5 card-title text-primary">32. TensorFlow: Deep Learning Basics</h3>
-                            <p class="card-text text-light">Source: TensorFlow Docs</p>
-                            <p class="card-text text-light">Build, train, and deploy neural networks with TensorFlow and Keras.</p>
+                            <h3 class="h5 card-title text-primary">32. tensorflow: deep learning basics</h3>
+                            <p class="card-text text-light">source: tensorflow docs</p>
+                            <p class="card-text text-light">build, train, and deploy neural networks with tensorflow and keras.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://www.tensorflow.org/learn" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="tensorflow">Mark Complete</button>
@@ -468,9 +469,9 @@
                         </article>
 
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="pytorch" data-aos="fade-up" data-aos-delay="300">
-                            <h3 class="h5 card-title text-primary">33. PyTorch: Practical Deep Learning</h3>
-                            <p class="card-text text-light">Source: PyTorch Tutorials</p>
-                            <p class="card-text text-light">Hands-on deep learning with dynamic graphs and production deployment patterns.</p>
+                            <h3 class="h5 card-title text-primary">33. pytorch: practical deep learning</h3>
+                            <p class="card-text text-light">source: pytorch tutorials</p>
+                            <p class="card-text text-light">hands-on deep learning with dynamic graphs and production deployment patterns.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://pytorch.org/tutorials/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="pytorch">Mark Complete</button>
@@ -478,9 +479,9 @@
                         </article>
 
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="deeplearn" data-aos="fade-up" data-aos-delay="400">
-                            <h3 class="h5 card-title text-primary">34. Deep Learning Specialization</h3>
-                            <p class="card-text text-light">Source: Coursera / deeplearning.ai</p>
-                            <p class="card-text text-light">Advanced neural network architectures, CNNs, sequence models, and practical tips.</p>
+                            <h3 class="h5 card-title text-primary">34. deep learning specialization</h3>
+                            <p class="card-text text-light">source: coursera / deeplearning.ai</p>
+                            <p class="card-text text-light">advanced neural network architectures, cnns, sequence models, and practical tips.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://www.coursera.org/specializations/deep-learning" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="deeplearn">Mark Complete</button>
@@ -488,9 +489,9 @@
                         </article>
 
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="fastai" data-aos="fade-up" data-aos-delay="500">
-                            <h3 class="h5 card-title text-primary">35. Practical Deep Learning (fast.ai)</h3>
-                            <p class="card-text text-light">Source: fast.ai</p>
-                            <p class="card-text text-light">Project-focused deep learning with best practices and practical model building.</p>
+                            <h3 class="h5 card-title text-primary">35. practical deep learning (fast.ai)</h3>
+                            <p class="card-text text-light">source: fast.ai</p>
+                            <p class="card-text text-light">project-focused deep learning with best practices and practical model building.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://www.fast.ai/" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="fastai">Mark Complete</button>
@@ -504,15 +505,15 @@
             <section class="accordion-item course-section bg-dark border-secondary">
                 <h2 class="accordion-header">
                     <button class="accordion-button bg-dark text-white fw-bold fs-5 shadow-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                        Stage 8: Capstone Projects & Portfolio 🌟
+                        stage 8: capstone projects & portfolio 🌟
                     </button>
                 </h2>
                 <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#curriculumAccordion">
                     <div class="accordion-body course-list p-4">
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="capstone" data-aos="fade-up" data-aos-delay="100">
-                            <h3 class="h5 card-title text-primary">36. Build Your Capstone Project</h3>
-                            <p class="card-text text-light">Source: Self-Guided</p>
-                            <p class="card-text text-light">Plan and implement a substantial project that demonstrates your skills end-to-end.</p>
+                            <h3 class="h5 card-title text-primary">36. build your capstone project</h3>
+                            <p class="card-text text-light">source: self-guided</p>
+                            <p class="card-text text-light">plan and implement a substantial project that demonstrates your skills end-to-end.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="#" class="btn btn-primary btn-sm course-link">Start Project</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="capstone">Mark Complete</button>
@@ -520,9 +521,9 @@
                         </article>
 
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="portfolio" data-aos="fade-up" data-aos-delay="200">
-                            <h3 class="h5 card-title text-primary">37. Build Your Portfolio Website</h3>
-                            <p class="card-text text-light">Source: Self-Guided</p>
-                            <p class="card-text text-light">Design and deploy a portfolio to showcase projects, case studies, and code.</p>
+                            <h3 class="h5 card-title text-primary">37. build your portfolio website</h3>
+                            <p class="card-text text-light">source: self-guided</p>
+                            <p class="card-text text-light">design and deploy a portfolio to showcase projects, case studies, and code.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="#" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="portfolio">Mark Complete</button>
@@ -530,9 +531,9 @@
                         </article>
 
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="oss_contrib" data-aos="fade-up" data-aos-delay="300">
-                            <h3 class="h5 card-title text-primary">38. Open Source Contribution</h3>
-                            <p class="card-text text-light">Source: GitHub Guides</p>
-                            <p class="card-text text-light">Learn to contribute to OSS projects — find issues, submit PRs, and collaborate effectively.</p>
+                            <h3 class="h5 card-title text-primary">38. open source contribution</h3>
+                            <p class="card-text text-light">source: github guides</p>
+                            <p class="card-text text-light">learn to contribute to oss projects — find issues, submit prs, and collaborate effectively.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://docs.github.com/en/get-started/quickstart/contributing-to-projects" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="oss_contrib">Mark Complete</button>
@@ -540,9 +541,9 @@
                         </article>
 
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="interviewprep" data-aos="fade-up" data-aos-delay="400">
-                            <h3 class="h5 card-title text-primary">39. Interview Preparation</h3>
-                            <p class="card-text text-light">Source: Cracking the Coding Interview / System resources</p>
-                            <p class="card-text text-light">Prepare for coding interviews: problem solving, mock interviews, and soft skills.</p>
+                            <h3 class="h5 card-title text-primary">39. interview preparation</h3>
+                            <p class="card-text text-light">source: cracking the coding interview / system resources</p>
+                            <p class="card-text text-light">prepare for coding interviews: problem solving, mock interviews, and soft skills.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://leetcode.com/" target="_blank" class="btn btn-primary btn-sm course-link">Start Practice</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="interviewprep">Mark Complete</button>
@@ -550,9 +551,9 @@
                         </article>
 
                         <article class="course-item card bg-secondary-subtle mb-3 p-3 shadow-sm" data-course="systemdesign" data-aos="fade-up" data-aos-delay="500">
-                            <h3 class="h5 card-title text-primary">40. System Design Fundamentals</h3>
-                            <p class="card-text text-light">Source: Educative / Grokking</p>
-                            <p class="card-text text-light">Learn scalable system design: architecture patterns, CAP, caching, load balancing, and trade-offs.</p>
+                            <h3 class="h5 card-title text-primary">40. system design fundamentals</h3>
+                            <p class="card-text text-light">source: educative / grokking</p>
+                            <p class="card-text text-light">learn scalable system design: architecture patterns, cap, caching, load balancing, and trade-offs.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="https://www.educative.io/courses/grokking-the-system-design-interview" target="_blank" class="btn btn-primary btn-sm course-link">Start Course</a>
                                 <button class="btn btn-outline-success btn-sm complete-btn" data-course="systemdesign">Mark Complete</button>
@@ -567,17 +568,17 @@
     <!-- Side TOC -->
     <nav id="side-toc" class="position-fixed end-0 top-50 translate-middle-y d-none d-xl-block me-3" aria-label="Stage navigation">
         <div class="card bg-dark border-secondary" style="width:220px;">
-            <div class="card-body py-2">
-                <h6 class="text-primary mb-2">Stages</h6>
+                <div class="card-body py-2">
+                <h6 class="text-primary mb-2">stages</h6>
                 <ul class="nav flex-column small">
-                    <li class="nav-item"><a class="nav-link text-light" href="#collapseOne">Stage 1</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="#collapseTwo">Stage 2</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="#collapseThree">Stage 3</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="#collapseFour">Stage 4</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="#collapseFive">Stage 5</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="#collapseSix">Stage 6</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="#collapseSeven">Stage 7</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="#collapseEight">Stage 8</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="#collapseOne">stage 1</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="#collapseTwo">stage 2</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="#collapseThree">stage 3</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="#collapseFour">stage 4</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="#collapseFive">stage 5</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="#collapseSix">stage 6</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="#collapseSeven">stage 7</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="#collapseEight">stage 8</a></li>
                 </ul>
             </div>
         </div>
