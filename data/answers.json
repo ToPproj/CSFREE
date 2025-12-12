@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "questionId": 1,
+    "userId": 2,
+    "body": "use display: flex on the parent and then add justify-content: center; align-items: center; that will center the div both horizontally and vertically.",
+    "votes": 4
+  },
+  {
+    "id": 2,
+    "questionId": 2,
+    "userId": 3,
+    "body": "use let when the value will change, const when the value stays the same, and avoid var unless you are maintaining old code. let and const are block-scoped.",
+    "votes": 6
+  },
+  {
+    "id": 3,
+    "questionId": 3,
+    "userId": 1,
+    "body": "you can use list.reverse(). it reverses the list in place so you don’t need slicing.",
+    "votes": 3
+  },
+  {
+    "id": 4,
+    "questionId": 4,
+    "userId": 4,
+    "body": "check if your anchor tag is inside another element with pointer-events: none in css. that can break your link.",
+    "votes": 2
+  },
+  {
+    "id": 5,
+    "questionId": 5,
+    "userId": 5,
+    "body": "a stack overflow happens when a program keeps calling functions without stopping until it runs out of memory. usually caused by infinite recursion.",
+    "votes": 5
+  }
+]

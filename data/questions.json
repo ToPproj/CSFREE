@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "how do i center a div in css?",
+    "body": "i tried margin: auto but the div still won't center. i'm working with flexbox but it won't move to the center of the page.",
+    "tags": ["css", "frontend"],
+    "votes": 3
+  },
+  {
+    "id": 2,
+    "title": "what's the difference between let, const, and var?",
+    "body": "i'm confused about javascript variables. sometimes people use var, sometimes let, and i don't know when i'm supposed to use const.",
+    "tags": ["javascript", "basics"],
+    "votes": 5
+  },
+  {
+    "id": 3,
+    "title": "how do i reverse a list in python?",
+    "body": "i know about slicing but i'm wondering if there's a built-in method to reverse a list without creating a new one.",
+    "tags": ["python", "lists"],
+    "votes": 2
+  },
+  {
+    "id": 4,
+    "title": "why is my html link not showing up?",
+    "body": "i added an <a> tag but the text isn't clickable. i think my css might be breaking it but i don't know how.",
+    "tags": ["html", "css"],
+    "votes": 1
+  },
+  {
+    "id": 5,
+    "title": "beginner question: what is a 'stack overflow' error?",
+    "body": "i'm new to coding and i keep seeing people talk about stack overflow errors. what exactly does that mean?",
+    "tags": ["beginners", "computer-science", "errors"],
+    "votes": 4
+  }
+]

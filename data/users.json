@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "username": "kodeguru",
+    "reputation": 120
+  },
+  {
+    "id": 2,
+    "username": "techstudent23",
+    "reputation": 85
+  },
+  {
+    "id": 3,
+    "username": "pythonkid",
+    "reputation": 150
+  },
+  {
+    "id": 4,
+    "username": "frontendfocus",
+    "reputation": 60
+  },
+  {
+    "id": 5,
+    "username": "csnewbie",
+    "reputation": 30
+  }
+]
