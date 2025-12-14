@@ -71,9 +71,53 @@
         ask questions, help others, and grow your skills together.
       </p>
 
+      <div class="container mt-4">
+  <div class="row justify-content-center">
+    <!-- ONE COLUMN CONTROLS WIDTH -->
+    <div class="col-12 col-md-10 col-lg-8">
+
+      <!-- QUESTIONS LIST -->
       <div id="questions-list" class="row gy-3">
-        <!-- JS will insert question cards here -->
+        <!-- JS will insert question cards like this:
+        <div class="col-12">
+          <div class="question-card">...</div>
+        </div>
+        -->
       </div>
+
+      <!-- ASK QUESTION -->
+      <div class="question-card mt-4">
+        <h4 class="question-title mb-3">ask a question</h4>
+
+        <input
+          id="q-title"
+          class="form-control mb-2"
+          placeholder="question title"
+        />
+
+        <textarea
+          id="q-body"
+          class="form-control mb-2"
+          rows="4"
+          placeholder="describe your question"
+        ></textarea>
+
+        <input
+          id="q-tags"
+          class="form-control mb-3"
+          placeholder="tags (comma separated)"
+        />
+
+        <button id="submit-question" class="btn post-btn">
+          post question
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
     </main>
 
     <!-- FOOTER -->

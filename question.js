@@ -1,81 +1,77 @@
 async function loadPage() {
   const params = new URLSearchParams(window.location.search);
-  const id = parseInt(params.get("id"));
+  const id = params.get("id");
 
-  const qRes = await fetch("./data/questions.json");
+  // 1️⃣ LOAD QUESTION
+  const qRes = await fetch("http://localhost:3000/api/questions");
   const questions = await qRes.json();
-
-  const question = questions.find(q => q.id === id);
-
-  const aRes = await fetch("./data/answers.json");
-  const answers = await aRes.json();
+  const question = questions.find(q => q.id == id);
 
   const questionContainer = document.getElementById("question-container");
-  const answersContainer = document.getElementById("answers-container");
-
-  // SHOW QUESTION
   questionContainer.innerHTML = `
     <div class="question-box">
       <h2 class="h4 text-primary">${question.title}</h2>
       <p class="text-light">${question.body}</p>
-      <p class="text-secondary small">tags: ${question.tags.join(", ")}</p>
+      <p class="text-secondary small">tags: ${question.tags}</p>
     </div>
   `;
 
-  // SHOW ANSWERS
-  const filteredAnswers = answers.filter(a => a.questionId === id);
-  
-  if (filteredAnswers.length === 0) {
-    answersContainer.innerHTML = `<p class="text-muted">no answers yet</p>`;
-    return;
+  // 2️⃣ LOAD ANSWERS
+  const aRes = await fetch(
+    `http://localhost:3000/api/questions/${id}/answers`
+  );
+  const answers = await aRes.json();
+
+  const answersContainer = document.getElementById("answers-container");
+  answersContainer.innerHTML = "";
+
+  if (answers.length === 0) {
+    answersContainer.innerHTML =
+      `<p class="text-muted">no answers yet</p>`;
   }
 
-  filteredAnswers.forEach(a => {
+  answers.forEach((a, i) => {
     const div = document.createElement("div");
     div.className = "answer-box";
 
     div.innerHTML = `
-      <div class="answer-author">user #${a.userId} said:</div>
+      <div class="answer-author">anonymous said:</div>
       <div class="answer-body">${a.body}</div>
     `;
 
     answersContainer.appendChild(div);
-   
-  });
-document.getElementById("submit-answer").onclick = () => {
-  const text = document.getElementById("answer-input").value.trim();
-  if (text.length === 0) return alert("answer cannot be empty");
 
-  const newAnswer = {
-    id: Date.now(),
-    questionId: id,
-    userId: 999, // guest user
-    body: text
+    setTimeout(() => div.classList.add("visible"), i * 120);
+  });
+
+  // 3️⃣ SUBMIT ANSWER
+  document.getElementById("submit-answer").onclick = async () => {
+    const input = document.getElementById("answer-input");
+    const text = input.value.trim();
+
+    if (!text) return alert("answer cannot be empty");
+
+    const res = await fetch(
+      `http://localhost:3000/api/questions/${id}/answers`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ body: text })
+      }
+    );
+
+    const newAnswer = await res.json();
+
+    const added = document.createElement("div");
+    added.className = "answer-box visible";
+    added.innerHTML = `
+      <div class="answer-author">anonymous said:</div>
+      <div class="answer-body">${newAnswer.body}</div>
+    `;
+
+    answersContainer.prepend(added);
+    input.value = "";
   };
-
-  // Append the new answer to the DOM (client-side only)
-  const added = document.createElement("div");
-  added.className = "answer-box";
-  added.innerHTML = `
-    <div class="answer-author">user #${newAnswer.userId} said:</div>
-    <div class="answer-body">${newAnswer.body}</div>
-  `;
-  answersContainer.appendChild(added);
-  document.getElementById("answer-input").value = "";
-};
-
 }
 
-function revealStaggered() {
-  const items = document.querySelectorAll(
-    ".question-box, .answer-box, .answer-form"
-  );
-
-  items.forEach((el, i) => {
-    setTimeout(() => el.classList.add("visible"), i * 120);
-  });
-}
-
-
-loadPage();
-revealStaggered();
+document.addEventListener("DOMContentLoaded", loadPage);
