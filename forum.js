@@ -1,5 +1,5 @@
 async function loadQuestions() {
-  const res = await fetch("http://localhost:3000/api/questions");
+  const res = await fetch("https://csfree-forum-backend.onrender.com/api/questions");
   const questions = await res.json();
 
   const container = document.getElementById("questions-list");
@@ -48,7 +48,7 @@ async function loadQuestions() {
 async function voteQuestion(id, currentVotes) {
   try {
     const newVotes = currentVotes + 1;
-    const res = await fetch(`http://localhost:3000/api/questions/${id}`, {
+    const res = await fetch(`https://csfree-forum-backend.onrender.com/api/questions/${id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ votes: newVotes })
@@ -87,7 +87,7 @@ document.getElementById("submit-question").onclick = async () => {
     return alert("title and body required");
   }
 
-  await fetch("http://localhost:3000/api/questions", {
+  await fetch("https://csfree-forum-backend.onrender.com/api/questions", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({

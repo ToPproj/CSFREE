@@ -3,7 +3,7 @@ async function loadPage() {
   const id = params.get("id");
 
   // 1️⃣ LOAD QUESTION
-  const qRes = await fetch("http://localhost:3000/api/questions");
+  const qRes = await fetch("https://csfree-forum-backend.onrender.com/api/questions");
   const questions = await qRes.json();
   const question = questions.find(q => q.id == id);
 
@@ -31,7 +31,7 @@ async function loadPage() {
   async function voteQuestionDetail(id, currentVotes) {
     const newVotes = currentVotes + 1;
     try {
-      const res = await fetch(`http://localhost:3000/api/questions/${id}`, {
+      const res = await fetch(`https://csfree-forum-backend.onrender.com/api/questions/${id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ votes: newVotes })
@@ -49,7 +49,7 @@ async function loadPage() {
 
   // 2️⃣ LOAD ANSWERS
   const aRes = await fetch(
-    `http://localhost:3000/api/questions/${id}/answers`
+    `https://csfree-forum-backend.onrender.com/api/questions/${id}/answers`
   );
   const answers = await aRes.json();
 
@@ -83,7 +83,7 @@ async function loadPage() {
     if (!text) return alert("answer cannot be empty");
 
     const res = await fetch(
-      `http://localhost:3000/api/questions/${id}/answers`,
+      `https://csfree-forum-backend.onrender.com/api/questions/${id}/answers`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
