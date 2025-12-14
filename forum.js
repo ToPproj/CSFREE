@@ -55,9 +55,7 @@ async function voteQuestion(id, currentVotes) {
     });
 
     if (!res.ok) {
-      alert(`Vote failed! Status: ${res.status} ${res.statusText}`);
-      const text = await res.text();
-      console.log("Server response:", text);
+      console.warn("Vote failed:", res.status);
       return;
     }
 
@@ -74,7 +72,6 @@ async function voteQuestion(id, currentVotes) {
       };
     }
   } catch (err) {
-    alert(`Vote error: ${err.message}`);
     console.error(err);
   }
 }

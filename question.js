@@ -29,25 +29,21 @@ async function loadPage() {
   document.getElementById("vote-btn-detail").onclick = () => voteQuestionDetail(id, question.votes ?? 0);
 
   async function voteQuestionDetail(id, currentVotes) {
+    const newVotes = currentVotes + 1;
     try {
-      const newVotes = currentVotes + 1;
       const res = await fetch(`http://localhost:3000/api/questions/${id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ votes: newVotes })
       });
 
-      if (!res.ok) {
-        alert(`Vote failed! Status: ${res.status} ${res.statusText}`);
-        return;
+      if (res.ok) {
+        document.getElementById("vote-count-detail").textContent = newVotes;
+        const btn = document.getElementById("vote-btn-detail");
+        btn.onclick = () => voteQuestionDetail(id, newVotes);
       }
-
-      document.getElementById("vote-count-detail").textContent = newVotes;
-      const btn = document.getElementById("vote-btn-detail");
-      btn.onclick = () => voteQuestionDetail(id, newVotes);
     } catch (err) {
-      alert(`Vote error: ${err.message}`);
-      console.error(err);
+      console.error("Voting failed:", err);
     }
   }
 
