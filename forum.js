@@ -46,27 +46,25 @@ async function loadQuestions() {
 }
 
 async function voteQuestion(id, currentVotes) {
-  const newVotes = currentVotes + 1;
-  const res = await fetch(`http://localhost:3000/api/questions/${id}`, {
-    method: "PATCH",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ votes: newVotes })
-  });
+  try {
+    const newVotes = currentVotes + 1;
+    const res = await fetch(`http://localhost:3000/api/questions/${id}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ votes: newVotes })
+    });
 
-  if (res.ok) {
+    if (!res.ok) {
+      alert(`Vote failed! Status: ${res.status} ${res.statusText}`);
+      const text = await res.text();
+      console.log("Server response:", text);
+      return;
+    }
+
+    // Success
     const el = document.getElementById(`vote-count-${id}`);
     if (el) el.textContent = newVotes;
 
-    // update the button too to prevent spamming if we wanted, but for now simple increment
-    // Update local data if we had a global store, but simple DOM update is enough
-
-    // If we want to support multiple votes without reload, we should update the onclick handler too
-    // But re-fetching or just incrementing visual is fine for this simple app.
-    // To be safe, let's just reload the questions or handle it in UI
-    // For smoothness, just UI update is best.
-
-    // We also need to update the 'onclick' closure's currentVotes, OR fetch fresh data next time.
-    // Actually, simple way:
     const btn = document.querySelector(`button[data-id="${id}"]`);
     if (btn) {
       btn.onclick = (e) => {
@@ -75,6 +73,9 @@ async function voteQuestion(id, currentVotes) {
         voteQuestion(id, newVotes);
       };
     }
+  } catch (err) {
+    alert(`Vote error: ${err.message}`);
+    console.error(err);
   }
 }
 
