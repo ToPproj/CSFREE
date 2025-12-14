@@ -1,0 +1,26 @@
+{
+  "name": "csfree",
+  "version": "1.0.0",
+  "description": "compilation of free cs resources\r :)",
+  "main": "forum.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ToPproj/CSFREE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ToPproj/CSFREE/issues"
+  },
+  "homepage": "https://github.com/ToPproj/CSFREE#readme",
+  "devDependencies": {
+    "parcel": "^2.16.3"
+  }
+}
