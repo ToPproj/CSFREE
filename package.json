@@ -2,7 +2,6 @@
   "name": "csfree",
   "version": "1.0.0",
   "description": "compilation of free cs resources\r :)",
-  "main": "forum.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel src/*.html",
